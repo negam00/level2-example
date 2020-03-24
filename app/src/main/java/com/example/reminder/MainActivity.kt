@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         initViews()
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener {
             val reminder = etReminder.text.toString()
             addReminder(reminder)
         }
@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.home -> true
             else -> super.onOptionsItemSelected(item)
         }
     }
